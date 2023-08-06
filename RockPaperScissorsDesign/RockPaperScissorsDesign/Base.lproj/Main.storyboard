@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pka-vg-r1Q">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rock Paper Scissors-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockPaperScissorsDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make your move!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB3-kv-15R">
+                                <rect key="frame" x="40" y="185" width="313" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="o7t-eS-flZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-P4-21E">
+                                <rect key="frame" x="145.33333333333334" y="315" width="102.33333333333334" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwl-KZ-lxW">
+                                <rect key="frame" x="124.66666666666669" y="355.33333333333331" width="144" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-1V-Qwq">
+                                <rect key="frame" x="16" y="455.66666666666674" width="361" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="rockButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfC-3t-aSd">
+                                        <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="120"/>
+                                        <color key="backgroundColor" red="0.96841150519999997" green="0.71797763930000003" blue="0.0" alpha="0.57023489238410596" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="👊🏼"/>
+                                        <connections>
+                                            <action selector="rockButtonAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZI-XY-c4r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEQ-JP-2xp">
+                                        <rect key="frame" x="121.66666666666666" y="0.0" width="117.66666666666666" height="120"/>
+                                        <color key="backgroundColor" red="0.95663207769393921" green="0.64356285333633423" blue="0.087528400123119354" alpha="0.70038286423841056" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="✋🏼">
+                                            <fontDescription key="titleFontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="60"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="paperButtonAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKY-cX-CxU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfr-Cu-zOK">
+                                        <rect key="frame" x="243.33333333333329" y="0.0" width="117.66666666666666" height="120"/>
+                                        <color key="backgroundColor" red="0.90980386729999996" green="0.6549019814" blue="0.2470588088" alpha="0.82657284768211925" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="✌🏼">
+                                            <fontDescription key="titleFontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="60"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="scissorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8M5-JX-kU9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="GUK-Eb-aw0"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw1-jl-mbN">
+                                <rect key="frame" x="120" y="701.66666666666663" width="153" height="46.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Play Again">
+                                    <color key="baseBackgroundColor" red="0.49019610879999997" green="0.78431367870000002" blue="0.94117647410000005" alpha="0.62898385761589404" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playAgainAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLs-LF-OpW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NB3-kv-15R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="0EI-2J-lzr"/>
+                            <constraint firstItem="p1U-1V-Qwq" firstAttribute="top" secondItem="gwl-KZ-lxW" secondAttribute="bottom" constant="80" id="4z9-gO-eqh"/>
+                            <constraint firstItem="Kw1-jl-mbN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="5NX-zf-W5K"/>
+                            <constraint firstItem="NB3-kv-15R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="99J-Nq-mbM"/>
+                            <constraint firstItem="wfh-P4-21E" firstAttribute="top" secondItem="NB3-kv-15R" secondAttribute="bottom" constant="80" id="IdT-8D-Wsa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NB3-kv-15R" secondAttribute="trailing" constant="40" id="K1p-SV-MYD"/>
+                            <constraint firstItem="p1U-1V-Qwq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dNa-iO-LME"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p1U-1V-Qwq" secondAttribute="trailing" constant="16" id="gTz-ar-fMt"/>
+                            <constraint firstItem="gwl-KZ-lxW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gWI-VI-CVO"/>
+                            <constraint firstItem="wfh-P4-21E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="heM-xC-duA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kw1-jl-mbN" secondAttribute="bottom" constant="70" id="kGj-MZ-kfd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kw1-jl-mbN" secondAttribute="trailing" constant="120" id="ofo-b1-zFZ"/>
+                            <constraint firstItem="Kw1-jl-mbN" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.07" id="tif-pV-PIr"/>
+                            <constraint firstItem="gwl-KZ-lxW" firstAttribute="top" secondItem="wfh-P4-21E" secondAttribute="bottom" constant="20" id="vbT-y7-Upc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rock Paper Scissors" id="nsU-q6-Cnl"/>
+                    <connections>
+                        <outlet property="cmpScoreLabel" destination="gwl-KZ-lxW" id="q6y-02-ga0"/>
+                        <outlet property="moveAlert" destination="NB3-kv-15R" id="ZXA-pL-crO"/>
+                        <outlet property="paperButton" destination="EEQ-JP-2xp" id="Wfc-rY-XF4"/>
+                        <outlet property="rockButton" destination="GfC-3t-aSd" id="2zx-vd-jct"/>
+                        <outlet property="scissorsButton" destination="Gfr-Cu-zOK" id="2Qe-FT-0Rg"/>
+                        <outlet property="stackView" destination="p1U-1V-Qwq" id="YQb-i5-aS6"/>
+                        <outlet property="userScoreLabel" destination="wfh-P4-21E" id="nkU-RW-P3V"/>
+                        <segue destination="AKB-up-zeK" kind="show" identifier="gotoresult" id="Z2x-0g-nbP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="4"/>
+        </scene>
+        <!--Game Result-->
+        <scene sceneID="Kjb-jV-6di">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" title="Game Result" id="AKB-up-zeK" customClass="SecondVC" customModule="RockPaperScissorsDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="awp-vG-bCw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsJ-TS-sQm">
+                                <rect key="frame" x="162.66666666666666" y="315" width="68" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Choice: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzr-0I-2WA">
+                                <rect key="frame" x="146" y="422" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptG-4T-H4v">
+                                <rect key="frame" x="129.66666666666666" y="483" width="133.99999999999997" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="miG-QT-TUP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dzr-0I-2WA" firstAttribute="top" secondItem="QsJ-TS-sQm" secondAttribute="bottom" constant="80" id="5L7-ZR-bY4"/>
+                            <constraint firstItem="QsJ-TS-sQm" firstAttribute="top" secondItem="miG-QT-TUP" secondAttribute="top" constant="160" id="Dqr-Rs-3Mp"/>
+                            <constraint firstItem="ptG-4T-H4v" firstAttribute="top" secondItem="Dzr-0I-2WA" secondAttribute="bottom" constant="40" id="eh0-8l-O4f"/>
+                            <constraint firstItem="Dzr-0I-2WA" firstAttribute="centerX" secondItem="awp-vG-bCw" secondAttribute="centerX" id="i6h-Yc-hgb"/>
+                            <constraint firstItem="ptG-4T-H4v" firstAttribute="centerX" secondItem="awp-vG-bCw" secondAttribute="centerX" id="m3j-Ra-QfW"/>
+                            <constraint firstItem="QsJ-TS-sQm" firstAttribute="centerX" secondItem="awp-vG-bCw" secondAttribute="centerX" id="yJ0-kb-h9O"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game Result" id="xd0-xO-DYq"/>
+                    <connections>
+                        <outlet property="cmpChoiceLabel" destination="ptG-4T-H4v" id="LzA-RL-mcH"/>
+                        <outlet property="resultLabel" destination="QsJ-TS-sQm" id="feI-oO-mak"/>
+                        <outlet property="userChoiceLabel" destination="Dzr-0I-2WA" id="H9L-dF-NWR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uzc-IK-4aU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1683" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="puJ-DY-M3N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pka-vg-r1Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2CW-7h-LkZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dl3-kF-Bvd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tnc-ee-Qeb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58.778625954198468" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
