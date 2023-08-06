@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CollectionViewController" id="Y6W-OH-hqX" customClass="CollectionViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHD-Nq-LPg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="379.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCD-dS-Bjc">
+                                        <rect key="frame" x="174.33333333333334" y="278" width="51.333333333333343" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="qXB-hq-kDs">
+                                        <rect key="frame" x="76" y="72" width="248" height="151"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="248" id="bXY-wb-q44"/>
+                                            <constraint firstAttribute="height" constant="151" id="hH3-uI-13f"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marianne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRx-7b-z91">
+                                        <rect key="frame" x="157" y="246" width="86" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="qXB-hq-kDs" firstAttribute="top" secondItem="aHD-Nq-LPg" secondAttribute="top" constant="72" id="66T-gi-ug9"/>
+                                    <constraint firstItem="BRx-7b-z91" firstAttribute="top" secondItem="qXB-hq-kDs" secondAttribute="bottom" constant="23" id="71g-tV-wfb"/>
+                                    <constraint firstItem="aCD-dS-Bjc" firstAttribute="top" secondItem="BRx-7b-z91" secondAttribute="bottom" constant="8" id="A1i-Ys-piv"/>
+                                    <constraint firstItem="BRx-7b-z91" firstAttribute="centerX" secondItem="qXB-hq-kDs" secondAttribute="centerX" id="SQs-jG-QxR"/>
+                                    <constraint firstItem="aCD-dS-Bjc" firstAttribute="centerX" secondItem="qXB-hq-kDs" secondAttribute="centerX" id="jqZ-If-by1"/>
+                                    <constraint firstItem="qXB-hq-kDs" firstAttribute="leading" secondItem="aHD-Nq-LPg" secondAttribute="leading" constant="76" id="kGw-7r-q0Q"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5nb-em-ReF">
+                                <rect key="frame" x="0.0" y="438.66666666666674" width="393" height="166"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="5pg-CD-U6f"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="msb-Vs-JcO">
+                                    <size key="itemSize" width="131" height="148"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="contactDetailCell" id="XJg-UP-bGT" customClass="ContactCollectionViewCell" customModule="ContactsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="9" width="131" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Emx-aK-dVR">
+                                            <rect key="frame" x="0.0" y="0.0" width="131" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="QHw-5u-dgI">
+                                                    <rect key="frame" x="0.0" y="8" width="131" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="UkH-w8-KzI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPM-xC-6x4">
+                                                    <rect key="frame" x="45" y="116" width="41" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="QHw-5u-dgI" secondAttribute="trailing" id="Dcw-4d-ByX"/>
+                                                <constraint firstItem="vPM-xC-6x4" firstAttribute="centerX" secondItem="QHw-5u-dgI" secondAttribute="centerX" id="Hzg-Ac-tKg"/>
+                                                <constraint firstItem="QHw-5u-dgI" firstAttribute="top" secondItem="Emx-aK-dVR" secondAttribute="top" constant="8" id="fE5-Tg-MuM"/>
+                                                <constraint firstItem="vPM-xC-6x4" firstAttribute="top" secondItem="QHw-5u-dgI" secondAttribute="bottom" constant="8" id="kL0-9M-NpM"/>
+                                                <constraint firstItem="QHw-5u-dgI" firstAttribute="leading" secondItem="Emx-aK-dVR" secondAttribute="leading" id="n67-An-cWF"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="131" height="148"/>
+                                        <connections>
+                                            <outlet property="contactImage" destination="QHw-5u-dgI" id="Imi-EK-y0a"/>
+                                            <outlet property="contactName" destination="vPM-xC-6x4" id="cPj-En-SpD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5nb-em-ReF" firstAttribute="top" secondItem="aHD-Nq-LPg" secondAttribute="bottom" id="0f0-KQ-Kim"/>
+                            <constraint firstItem="aHD-Nq-LPg" firstAttribute="height" secondItem="vDu-zF-Fre" secondAttribute="height" multiplier="0.5" id="CtO-vS-f5Q"/>
+                            <constraint firstItem="aHD-Nq-LPg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="MoW-XO-Wld"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aHD-Nq-LPg" secondAttribute="trailing" id="aRf-eg-Vcy"/>
+                            <constraint firstItem="5nb-em-ReF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="onf-2d-6aN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5nb-em-ReF" secondAttribute="trailing" id="uck-fy-Epu"/>
+                            <constraint firstItem="aHD-Nq-LPg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="urJ-i5-B7m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contactDetailCollectionView" destination="5nb-em-ReF" id="6N0-Fd-os0"/>
+                        <outlet property="selectedContactGroup" destination="aCD-dS-Bjc" id="rHK-Jn-24O"/>
+                        <outlet property="selectedContactImage" destination="qXB-hq-kDs" id="ltH-wz-PQ6"/>
+                        <outlet property="selectedContactName" destination="BRx-7b-z91" id="NhE-eB-PxT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-547" y="-71"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="man" width="512" height="512"/>
+        <image name="woman" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

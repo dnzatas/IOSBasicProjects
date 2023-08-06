@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contacts View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ContactsViewController" id="Y6W-OH-hqX" customClass="ContactsViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPx-uY-ivj">
+                                <rect key="frame" x="159" y="58.999999999999993" width="75" height="21.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kdM-GF-FWJ">
+                                <rect key="frame" x="0.0" y="132.66666666666669" width="393" height="685.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contactCell" id="gqd-lV-bXc">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gqd-lV-bXc" id="QJz-Qe-bNj">
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Txg-OX-ZKI">
+                                <rect key="frame" x="0.0" y="92.666666666666671" width="393" height="40.000000000000014"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2jt-fi-G9X"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="wsU-yC-DMQ"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kdM-GF-FWJ" secondAttribute="bottom" id="0F7-P1-RxL"/>
+                            <constraint firstItem="Txg-OX-ZKI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="37n-Ra-Ptl"/>
+                            <constraint firstItem="Txg-OX-ZKI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="90v-Lo-O4F"/>
+                            <constraint firstItem="HPx-uY-ivj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9j3-wJ-ql1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kdM-GF-FWJ" secondAttribute="trailing" id="O4l-Ek-aGh"/>
+                            <constraint firstItem="kdM-GF-FWJ" firstAttribute="top" secondItem="Txg-OX-ZKI" secondAttribute="bottom" id="PEL-SM-FXe"/>
+                            <constraint firstItem="HPx-uY-ivj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="R1J-Mk-u4z"/>
+                            <constraint firstItem="Txg-OX-ZKI" firstAttribute="top" secondItem="HPx-uY-ivj" secondAttribute="bottom" constant="12" id="h4q-Eb-CGY"/>
+                            <constraint firstItem="kdM-GF-FWJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="reJ-nF-7YR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contactSearchBar" destination="Txg-OX-ZKI" id="kAW-xB-fwZ"/>
+                        <outlet property="contactsTableView" destination="kdM-GF-FWJ" id="seX-T4-xc8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-353" y="-23"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
