@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="Y6W-OH-hqX" customClass="MainViewController" customModule="AnimalInfos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0q-vD-dgi">
+                                <rect key="frame" x="0.0" y="59" width="393" height="1007"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAc-rj-Jqz" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="403" height="1000"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" restorationIdentifier="cheetahView" translatesAutoresizingMaskIntoConstraints="NO" id="6t9-xD-ktM" userLabel="Cheetah View" customClass="AnimalView" customModule="AnimalInfos" customModuleProvider="target">
+                                                <rect key="frame" x="26" y="8" width="168" height="193"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="168" id="7e3-JW-Va5"/>
+                                                    <constraint firstAttribute="height" constant="193" id="7hp-J7-XSF"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" restorationIdentifier="elephantView" translatesAutoresizingMaskIntoConstraints="NO" id="h9Z-nL-Jxg" userLabel="Elephant View" customClass="AnimalView" customModule="AnimalInfos" customModuleProvider="target">
+                                                <rect key="frame" x="209" y="8" width="168" height="193"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="168" id="cuR-iD-aMu"/>
+                                                    <constraint firstAttribute="height" constant="193" id="kuu-yp-xW6"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" restorationIdentifier="giraffeView" translatesAutoresizingMaskIntoConstraints="NO" id="VaN-rh-PEr" userLabel="Giraffe View" customClass="AnimalView" customModule="AnimalInfos" customModuleProvider="target">
+                                                <rect key="frame" x="26" y="229" width="168" height="193"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="Gcc-5P-JWj"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="193" id="HVC-RF-IGc"/>
+                                                    <constraint firstAttribute="width" constant="168" id="UBy-vf-U9P"/>
+                                                    <constraint firstAttribute="height" constant="193" id="Wog-GU-Hqu"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" restorationIdentifier="hippopotamusView" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-Yo-gJw" userLabel="Hippopotamus View" customClass="AnimalView" customModule="AnimalInfos" customModuleProvider="target">
+                                                <rect key="frame" x="26" y="450" width="168" height="193"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="193" id="MUd-cp-sRm"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="NwK-Gs-Jbw"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="193" id="W2m-KX-k3K"/>
+                                                    <constraint firstAttribute="width" constant="168" id="YtB-Zf-Sc8"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" restorationIdentifier="lionView" translatesAutoresizingMaskIntoConstraints="NO" id="p7Y-7a-73j" userLabel="Lion View" customClass="AnimalView" customModule="AnimalInfos" customModuleProvider="target">
+                                                <rect key="frame" x="209" y="450" width="168" height="193"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="193" id="QOq-aG-PXY"/>
+                                                    <constraint firstAttribute="width" constant="168" id="dEu-bF-PAt"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" restorationIdentifier="zebraView" translatesAutoresizingMaskIntoConstraints="NO" id="UQb-HW-qPG" userLabel="Zebra View" customClass="AnimalView" customModule="AnimalInfos" customModuleProvider="target">
+                                                <rect key="frame" x="26" y="671" width="168" height="193"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="193" id="Cui-d4-9pD"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="193" id="D29-rx-qX4"/>
+                                                    <constraint firstAttribute="width" constant="168" id="Jrm-S0-On1"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="wOc-J3-JKT"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" restorationIdentifier="ostrichView" translatesAutoresizingMaskIntoConstraints="NO" id="8XU-IR-rIz" userLabel="Ostrich View" customClass="AnimalView" customModule="AnimalInfos" customModuleProvider="target">
+                                                <rect key="frame" x="209" y="671" width="168" height="193"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="168" id="MKr-M8-f2X"/>
+                                                    <constraint firstAttribute="height" constant="193" id="OKa-5L-BoK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" restorationIdentifier="gorillaView" translatesAutoresizingMaskIntoConstraints="NO" id="8fy-3r-bZX" userLabel="Gorilla View" customClass="AnimalView" customModule="AnimalInfos" customModuleProvider="target">
+                                                <rect key="frame" x="209" y="229" width="168" height="193"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="168" id="LFT-Ma-AC7"/>
+                                                    <constraint firstAttribute="height" constant="193" id="OgM-yN-rC9"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstItem="E9J-Yo-gJw" firstAttribute="leading" secondItem="PAc-rj-Jqz" secondAttribute="leading" constant="26" id="6dj-Wn-svX"/>
+                                            <constraint firstAttribute="trailing" secondItem="h9Z-nL-Jxg" secondAttribute="trailing" constant="26" id="ASP-Si-wXF"/>
+                                            <constraint firstItem="8XU-IR-rIz" firstAttribute="top" secondItem="p7Y-7a-73j" secondAttribute="bottom" constant="28" id="BjN-3C-kLb"/>
+                                            <constraint firstItem="UQb-HW-qPG" firstAttribute="leading" secondItem="PAc-rj-Jqz" secondAttribute="leading" constant="26" id="Fel-dj-Qxn"/>
+                                            <constraint firstAttribute="height" constant="1000" id="GAI-Ps-usd"/>
+                                            <constraint firstItem="6t9-xD-ktM" firstAttribute="leading" secondItem="PAc-rj-Jqz" secondAttribute="leading" constant="26" id="GWN-YX-EhH"/>
+                                            <constraint firstItem="p7Y-7a-73j" firstAttribute="top" secondItem="8fy-3r-bZX" secondAttribute="bottom" constant="28" id="I9l-qH-7Sa"/>
+                                            <constraint firstAttribute="trailing" secondItem="8fy-3r-bZX" secondAttribute="trailing" constant="26" id="Jwk-yW-Wkj"/>
+                                            <constraint firstAttribute="trailing" secondItem="8XU-IR-rIz" secondAttribute="trailing" constant="26" id="RS2-fv-vKt"/>
+                                            <constraint firstItem="E9J-Yo-gJw" firstAttribute="top" secondItem="VaN-rh-PEr" secondAttribute="bottom" constant="28" id="SFe-BG-FPS"/>
+                                            <constraint firstItem="VaN-rh-PEr" firstAttribute="leading" secondItem="PAc-rj-Jqz" secondAttribute="leading" constant="26" id="col-MC-OKZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="p7Y-7a-73j" secondAttribute="trailing" constant="26" id="dOs-dh-3nN"/>
+                                            <constraint firstItem="UQb-HW-qPG" firstAttribute="top" secondItem="E9J-Yo-gJw" secondAttribute="bottom" constant="28" id="eOc-OS-LNG"/>
+                                            <constraint firstItem="8fy-3r-bZX" firstAttribute="top" secondItem="h9Z-nL-Jxg" secondAttribute="bottom" constant="28" id="ia5-NK-NEF"/>
+                                            <constraint firstItem="6t9-xD-ktM" firstAttribute="top" secondItem="PAc-rj-Jqz" secondAttribute="top" constant="8" id="q4E-0e-xTy"/>
+                                            <constraint firstItem="VaN-rh-PEr" firstAttribute="top" secondItem="6t9-xD-ktM" secondAttribute="bottom" constant="28" id="wmH-Wa-EZc"/>
+                                            <constraint firstItem="h9Z-nL-Jxg" firstAttribute="top" secondItem="PAc-rj-Jqz" secondAttribute="top" constant="8" id="xwL-uO-i5g"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PAc-rj-Jqz" firstAttribute="leading" secondItem="G0q-vD-dgi" secondAttribute="leading" id="A5z-Ue-GFC"/>
+                                    <constraint firstAttribute="trailing" secondItem="PAc-rj-Jqz" secondAttribute="trailing" id="YmN-4X-PEr"/>
+                                    <constraint firstItem="PAc-rj-Jqz" firstAttribute="top" secondItem="G0q-vD-dgi" secondAttribute="top" id="f1I-sk-jKq"/>
+                                    <constraint firstAttribute="bottom" secondItem="PAc-rj-Jqz" secondAttribute="bottom" id="wxL-rR-iO9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="G0q-vD-dgi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="5oe-o6-QOc"/>
+                            <constraint firstItem="PAc-rj-Jqz" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="1.02545" id="6RB-wb-iuF"/>
+                            <constraint firstItem="G0q-vD-dgi" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="NLC-sX-Ddh"/>
+                            <constraint firstItem="G0q-vD-dgi" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="qHs-iL-dWn"/>
+                            <constraint firstItem="G0q-vD-dgi" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="xBp-R5-DgJ"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="1100"/>
+                    <connections>
+                        <outlet property="cheetahView" destination="6t9-xD-ktM" id="0nV-2B-p2Z"/>
+                        <outlet property="elephantView" destination="h9Z-nL-Jxg" id="kN3-81-8Sa"/>
+                        <outlet property="giraffeView" destination="VaN-rh-PEr" id="Ywm-oB-kEb"/>
+                        <outlet property="gorillaView" destination="8fy-3r-bZX" id="PRF-nw-Zvg"/>
+                        <outlet property="hippopotamusView" destination="E9J-Yo-gJw" id="hE7-Xz-5nd"/>
+                        <outlet property="lionView" destination="p7Y-7a-73j" id="Exh-aH-CSt"/>
+                        <outlet property="ostrichView" destination="8XU-IR-rIz" id="a3N-my-T5D"/>
+                        <outlet property="zebraView" destination="UQb-HW-qPG" id="7w6-Ao-nYy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
