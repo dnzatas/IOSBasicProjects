@@ -1,3 +1,6 @@
-# Rock Paper Scissors Game with Design
+# Animals Information App
 
-This is a game of rock paper scissors written in swift
+This is an application that displays animal information
+
+<br>
+<img src="animalInfo.gif" alt="Animals Information App" title="Animals Information App">
